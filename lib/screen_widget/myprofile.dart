@@ -32,7 +32,7 @@ class _MyProfileState extends State<MyProfile> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const SizedBox(height: 50,),
+          const SizedBox(height: 40,),
 
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -40,9 +40,14 @@ class _MyProfileState extends State<MyProfile> {
             children: [
 
               /// My Image
-              const CircleAvatar(
-                radius: 140,
-                backgroundImage: AssetImage('assets/images/akshay.jpg'),
+               Container(
+                 width: screenWidth > 600 ? screenWidth*0.2:screenWidth*0.6,
+                 height: screenHeight*0.55,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(screenWidth*0.02),
+                  image: DecorationImage(image: 
+                  AssetImage('assets/images/akshay.jpg'),fit: BoxFit.fill)
+                ),
               ),
 
 

@@ -36,11 +36,15 @@ class MySkills extends StatelessWidget {
                 onTap: (){},),
 
 
-                CardTextWidget(title: "Python",
+                CardTextWidget(title: "Javascript",
                   padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
                   onTap: (){},),
 
-                CardTextWidget(title: "Javascript",
+                CardTextWidget(title: "Typescript",
+                  padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
+                  onTap: (){},),
+
+                CardTextWidget(title: "Python",
                   padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
                   onTap: (){},),
 
@@ -61,7 +65,11 @@ class MySkills extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
                   onTap: (){},),
 
-                CardTextWidget(title: "Node Js",
+                CardTextWidget(title: "Firebase",
+                  padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
+                  onTap: (){},),
+
+                CardTextWidget(title: "Nest Js",
                   padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
                   onTap: (){},),
 
@@ -84,6 +92,10 @@ class MySkills extends StatelessWidget {
 
               children: [
                 CardTextWidget(title: "Canva",
+                  padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
+                  onTap: (){},),
+
+                CardTextWidget(title: "Figma",
                   padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
                   onTap: (){},),
 

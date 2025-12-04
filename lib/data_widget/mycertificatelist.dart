@@ -8,4 +8,7 @@ List<dynamic> myCertificateList = [
   {
     "image":'assets/certificate/graphic-designer.jpg',
   },
+  {
+    "image":'assets/certificate/ftfl.webp',
+  },
 ];
