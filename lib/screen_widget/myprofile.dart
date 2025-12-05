@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:zero_pls/constant_widget/hw_widget.dart';
-
 import '../constant_widget/social_media_url.dart';
 import '../custom_widget/fonticons.dart';
 
@@ -42,7 +40,7 @@ class _MyProfileState extends State<MyProfile> {
               /// My Image
                Container(
                  width: screenWidth > 600 ? screenWidth*0.2:screenWidth*0.6,
-                 height: screenHeight*0.55,
+                 height: screenHeight*0.5,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(screenWidth*0.02),
                   image: DecorationImage(image: 
