@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:zero_pls/constant_widget/hw_widget.dart';
-
 import '../constant_widget/social_media_url.dart';
 import 'myprofile.dart';
 
@@ -22,11 +21,6 @@ class _MyFooterState extends State<MyFooter> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const TextPadding(
-            title: "Create By Akshay - 2024",
-            textStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),),
-
-
           5.height,
           Row(
             children: [

@@ -32,20 +32,16 @@ class MyProjects extends StatelessWidget {
               color: Colors.deepOrange.shade100,
             ),
 
-            // ⭐ Replaced Center → Added GridView
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
-
                 Expanded(
                   child: GridView.builder(
-                    itemCount: 6, // You can increase
+                    itemCount: 6,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: screenWidth > 600 ? 4 : 2,
-                      crossAxisSpacing: 12,
-                      mainAxisSpacing: 12,
-
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
                     ),
                     itemBuilder: (context, index) {
                       return Container(
@@ -55,19 +51,36 @@ class MyProjects extends StatelessWidget {
                         ),
                         child: Column(
                           children: [
-                            // 🔥 Random Image
+                            //  IMAGE HOVER SCALE ADDED HERE
                             Expanded(
-                              child: ClipRRect(
-                                borderRadius: const BorderRadius.only(
-                                  topLeft: Radius.circular(12),
-                                  topRight: Radius.circular(12),
-                                ),
-                                child: Image.network(
-                                  randomImage(),
-                                  height: 110,
-                                  width: double.infinity,
-                                  fit: BoxFit.cover,
-                                ),
+                              child: StatefulBuilder(
+                                builder: (context, setState) {
+                                  bool isHovered = false;
+
+                                  return MouseRegion(
+                                    onEnter: (_) => setState(() => isHovered = true),
+                                    onExit: (_) => setState(() => isHovered = false),
+
+                                    child: AnimatedScale(
+                                      scale: isHovered ? 1.10 : 1.0,
+                                      duration: const Duration(milliseconds: 180),
+                                      curve: Curves.easeOut,
+
+                                      child: ClipRRect(
+                                        borderRadius: const BorderRadius.only(
+                                          topLeft: Radius.circular(12),
+                                          topRight: Radius.circular(12),
+                                        ),
+                                        child: Image.network(
+                                          randomImage(),
+                                          height: 110,
+                                          width: double.infinity,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
                               ),
                             ),
 
